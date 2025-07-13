@@ -1,0 +1,110 @@
+body {
+    font-family: Poppins;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    width: 95%;
+    top: 235px;
+    gap: 30px;
+    margin: 0px 50px;
+    overflow: auto;
+}
+
+.card {
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 10px 0px #3F52FF1A;
+    width: 27%;
+    min-width: 410px;
+    height: 450px;
+    border-radius: 10px;
+    padding: 0px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.title-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    position: absolute;
+    top: 10%;
+    gap: 15px;
+}
+
+.title {
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #467CFF;
+}
+
+.title-container>img {
+    width: 20%;
+}
+
+.ipo-details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ipo-details table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 3rem;
+    margin-left: 1rem;
+}
+
+.ipo-details th {
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: #5A5858;
+    text-align: start;
+    padding-bottom: 1rem;
+}
+
+.ipo-details td {
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-align: start;
+    color: #000000;
+    padding: 0.2rem 0;
+}
+
+#table-2 {
+    margin-bottom: 0;
+}
+
+.buttons {
+    width: 30%;
+    position: absolute;
+    top: 80%;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.buttons button {
+    width: 20%;
+    min-width: 70px;
+    padding: 0.6rem 0rem 0.6rem 0.6rem;
+    border-radius: 10px;
+    border: none;
+    background-color: #E1EFFF;
+    color: #000000;
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 1.375rem;
+    line-height: 100%;
+    letter-spacing: 0%;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.buttons button:hover {
+    background-color: #d2e2f9;
+}

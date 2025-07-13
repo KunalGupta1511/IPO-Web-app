@@ -1,12 +1,14 @@
 import { useState } from 'react'
 import Navbar from './components/Navbar'
+import Header from './components/Header'
+import UpcomingIpoCard from './components/UpcomingIpoCard'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <Navbar />
+      <Header/>
+      <UpcomingIpoCard />
     </>
   )
 }

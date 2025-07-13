@@ -1,19 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: #F7F7FF;
     margin: 0;
     padding: 0;
+    font-family: Poppins;
+    width: 100%;
+    line-height: 100%;
+    letter-spacing: 0%;
 }
 
 nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-family: Poppins;
     font-weight: 600;
-    font-style: SemiBold;
     font-size: 0.9375rem;
-    line-height: 100%;
-    letter-spacing: 0%;
     box-shadow: 0px 4px 20px 5px #00000005;
     background-color: #FFFFFF;
     width: 100%;
@@ -34,13 +39,10 @@ nav {
     height: 66%;
 }
 
-.logo-container > span {
+.logo-container>span {
     font-family: Poppins;
     font-weight: 700;
-    font-style: Bold;
     font-size: 2.8125rem;
-    line-height: 100%;
-    letter-spacing: 0%;
     color: #1E1E1E;
 }
 
@@ -49,7 +51,7 @@ nav {
     list-style: none;
     justify-content: space-evenly;
     align-items: center;
-    width: 32%;
+    min-width: 40%;
 }
 
 .nav-links {
@@ -61,29 +63,35 @@ nav {
     background-color: #3F52FF;
     color: white;
     border: none;
+    border-radius: 3px;
     width: 2.375rem;
     height: 1rem;
+    font-family: Poppins;
+    font-weight: 600;
+    font-style: SemiBold;
     font-size: 11px;
+    line-height: 100%;
+    letter-spacing: 0%;
     margin: 0.7rem;
 }
 
-.products{
+.products {
     display: flex;
     align-items: center;
-    gap:0.5rem;
+    gap: 0.5rem;
 }
 
-.brokers{
+.brokers {
     display: flex;
     align-items: center;
-    gap:0.5rem;
+    gap: 0.5rem;
 }
 
 .signIn-signUp {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 15%;
+    width: 20%;
     height: 34%;
 }
 
@@ -108,20 +116,79 @@ nav {
     text-decoration: none;
 }
 
-@media (max-width:1450px) {
-    nav{
+@media (max-width:1500px) {
+    nav {
         justify-content: space-between;
     }
 
-    .logo-container > span {
-        font-size: 2rem;
+    .logo-container>span {
+        font-size: 1.8rem;
     }
 
-    .nav-list{
+    .nav-list {
         width: 50%;
     }
 
-    .signIn-signUp{
-        width:25%;
+    .signIn-signUp {
+        width: 25%;
     }
+}
+
+header {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    top: 131px;
+    left: 4%;
+}
+
+.heading {
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 2rem;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.description {
+    font-weight: 300;
+    font-size: 0.875rem;
+}
+
+#upcomingIpo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 42px;
+    position: absolute;
+    top: 227px;
+    left: 4%;
+}
+
+#upcomingIpo>button {
+    background-color: #3F52FF;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    width: 8%;
+    height: 100%;
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 0.9375rem;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+}
+
+.text-title {
+    font-weight: 400;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.text {
+    font-weight: 300;
+    font-size: 0.875rem;
 }
