@@ -192,3 +192,40 @@ header {
     font-weight: 300;
     font-size: 0.875rem;
 }
+
+.scroll-dots {
+    position: relative;
+    top:235px;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    gap: 0.5rem;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #467cff;
+}
+
+svg{
+    cursor: pointer;
+}
+
+.next{
+    position: absolute;
+    right: 0;
+    top:600px;
+}
+
+.previous{
+    position: absolute;
+    top:600px;
+}

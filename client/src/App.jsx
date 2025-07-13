@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Navbar from './components/Navbar'
 import Header from './components/Header'
-import UpcomingIpoCard from './components/UpcomingIpoCard'
+import UpcomingIpoCard from './components/Upcoming'
 
 function App() {
   return (
