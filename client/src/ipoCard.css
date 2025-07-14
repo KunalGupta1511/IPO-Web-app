@@ -48,10 +48,10 @@ body {
 .title-container {
     display: flex;
     justify-content: flex-start;
-    align-items: start;
+    align-items: center;
     position: relative;
     white-space: nowrap;
-    width: 75%;
+    width: 100%;
     height: auto;
     top: 10%;
     gap: 15px;

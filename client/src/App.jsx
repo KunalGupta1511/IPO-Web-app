@@ -3,6 +3,8 @@ import Navbar from './components/Navbar'
 import Header from './components/Header'
 import UpcomingIpoCard from './components/Upcoming'
 import Demat from './components/Demat'
+import Ongoing from './components/Ongoing'
+import NewListed from './components/NewListed'
 
 function App() {
   return (
@@ -11,6 +13,8 @@ function App() {
       <Header/>
       <UpcomingIpoCard />
       <Demat />
+      <Ongoing />
+      <NewListed />
     </>
   )
 }

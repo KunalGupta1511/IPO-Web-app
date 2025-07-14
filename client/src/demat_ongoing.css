@@ -22,10 +22,10 @@
     align-items: center;
     width: 31%;
     margin-top: 1rem;
-    margin-bottom: 1.7rem ;
+    margin-bottom: 1.7rem;
 }
 
-.demat-logo-container > img{
+.demat-logo-container>img {
     width: 35%;
     height: auto;
     min-width: 55px;
@@ -61,43 +61,85 @@ span {
     font-weight: 700;
     background-color: #3F52FF;
     color: white;
-    padding:15px 40px;
+    padding: 15px 40px;
     font-size: 1rem;
     line-height: 100%;
     letter-spacing: 0%;
-    margin-top: 3rem;
+    margin: 3rem 0rem;
     border: none;
     border-radius: 10px;
 }
 
 @media (max-width:1500px) {
-    .demat-title{
+    .demat-title {
         font-size: 2.5rem;
     }
-    span{
+
+    span {
         font-size: 2rem;
     }
-    .demat-text{
+
+    .demat-text {
         font-size: 1.2rem;
     }
-    .demat-account > button{
+
+    .demat-account>button {
         margin-top: 2.5rem;
         font-size: 0.85rem;
     }
 }
 
 @media (max-width:1024px) {
-    .demat-title{
+    .demat-title {
         font-size: 2rem;
     }
-    span{
+
+    span {
         font-size: 1.5rem;
     }
-    .demat-text{
+
+    .demat-text {
         font-size: 1rem;
     }
-    .demat-account > button{
+
+    .demat-account>button {
         margin-top: 2rem;
         font-size: 0.75rem;
     }
+}
+
+#ongoingIpo {
+    position: relative;
+}
+
+#newListedIpo {
+    position: relative;
+    top: 275px;
+}
+
+.new-listed-ipo-list>.card-container {
+    top: 300px;
+}
+
+.new .table-2 tbody tr td:nth-child(3) {
+    padding-left: 2.5rem;
+}
+
+.new .table-2 thead tr th:nth-child(3) {
+    padding-left: 1.5rem;
+}
+
+.new .table-2 thead tr th:nth-child(1) {
+    padding-right: 1.5rem;
+}
+
+.ongoing-ipo-list > .previous, .new-listed-ipo-list > .previous{
+    position: relative;
+    bottom: 0;
+}
+
+.ongoing-ipo-list > .next , .new-listed-ipo-list > .next{
+    position: relative;
+    top: 38px;
+    left: 95vw;
 }

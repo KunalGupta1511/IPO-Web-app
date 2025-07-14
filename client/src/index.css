@@ -26,6 +26,10 @@ nav {
     overflow: auto;
 }
 
+nav>svg {
+    display: none;
+}
+
 .logo-container {
     display: flex;
     align-items: center;
@@ -138,7 +142,9 @@ header {
     font-size: 0.875rem;
 }
 
-#upcomingIpo {
+#upcomingIpo,
+#ongoingIpo,
+#newListedIpo {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -149,7 +155,9 @@ header {
     left: 4%;
 }
 
-#upcomingIpo>button {
+#upcomingIpo>button,
+#ongoingIpo>button,
+#newListedIpo>button {
     background-color: #3F52FF;
     color: white;
     border: none;
@@ -215,19 +223,26 @@ svg {
     nav {
         justify-content: space-between;
     }
+
     .logo-container>div {
         font-size: 1.8rem;
     }
+
     .nav-list {
         width: 50%;
     }
+
     .signIn-signUp {
         width: 25%;
     }
+
     .heading {
         font-size: 1.75rem;
     }
-    #upcomingIpo > button{
+
+    #upcomingIpo>button,
+    #ongoingIpo>button,
+    #newListedIpo>button {
         font-size: 1rem;
         font-weight: 600;
         width: 12%;
@@ -236,32 +251,87 @@ svg {
 
 @media (max-width:1024px) {
     .signIn-signUp {
+        width: 20%;
         display: none;
     }
+
+    .signIn-signUp.activate {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 6rem;
+        right: 0;
+        z-index: 1;
+        gap: 10px;
+        max-height: 10%;
+        background-color: white;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        padding: 1rem 0rem;
+        transform-origin: top;
+        border: none;
+        border-radius: 10px;
+        animation: squeezeOut 0.3s ease;
+    }
+
+    .sign-up {
+        width: auto;
+        padding: 0rem 1rem;
+        max-height: 50px;
+        background-color: white;
+        color: #3F52FF;
+    }
+
     nav {
         justify-content: space-around;
     }
+
+    nav>svg {
+        display: block;
+    }
+
     .logo-container>div {
         font-size: 1.4rem;
     }
+
     .nav-list {
-        width: 70% ;
+        width: 70%;
     }
+
     nav {
         gap: 10px;
     }
+
     .heading {
         font-size: 1.5rem;
     }
-    .text-title{
+
+    .text-title {
         font-size: 1rem;
     }
-    #upcomingIpo{
-        gap:10px;
+
+    #upcomingIpo,
+    #ongoingIpo,
+    #newListedIpo {
+        gap: 10px;
     }
-    #upcomingIpo > button{
+
+    #upcomingIpo>button,
+    #ongoingIpo>button,
+    #newListedIpo>button {
         font-size: 0.75rem;
         font-weight: 500;
         width: 12%;
+    }
+}
+
+@keyframes squeezeOut {
+    0% {
+        transform: scaleY(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scaleY(1);
+        opacity: 1;
     }
 }
