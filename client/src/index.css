@@ -36,10 +36,10 @@ nav {
 
 .logo {
     width: 21%;
-    height: 66%;
+    height: auto;
 }
 
-.logo-container>span {
+.logo-container>div {
     font-family: Poppins;
     font-weight: 700;
     font-size: 2.8125rem;
@@ -116,24 +116,6 @@ nav {
     text-decoration: none;
 }
 
-@media (max-width:1500px) {
-    nav {
-        justify-content: space-between;
-    }
-
-    .logo-container>span {
-        font-size: 1.8rem;
-    }
-
-    .nav-list {
-        width: 50%;
-    }
-
-    .signIn-signUp {
-        width: 25%;
-    }
-}
-
 header {
     position: absolute;
     display: flex;
@@ -179,7 +161,6 @@ header {
     font-size: 0.9375rem;
     line-height: 100%;
     letter-spacing: 0%;
-
 }
 
 .text-title {
@@ -195,7 +176,7 @@ header {
 
 .scroll-dots {
     position: relative;
-    top:235px;
+    top: 235px;
     display: flex;
     justify-content: center;
     margin-top: 1rem;
@@ -215,17 +196,72 @@ header {
     background-color: #467cff;
 }
 
-svg{
+svg {
     cursor: pointer;
 }
 
-.next{
+.next {
     position: absolute;
     right: 0;
-    top:600px;
+    top: 600px;
 }
 
-.previous{
+.previous {
     position: absolute;
-    top:600px;
+    top: 600px;
+}
+
+@media (max-width:1500px) {
+    nav {
+        justify-content: space-between;
+    }
+    .logo-container>div {
+        font-size: 1.8rem;
+    }
+    .nav-list {
+        width: 50%;
+    }
+    .signIn-signUp {
+        width: 25%;
+    }
+    .heading {
+        font-size: 1.75rem;
+    }
+    #upcomingIpo > button{
+        font-size: 1rem;
+        font-weight: 600;
+        width: 12%;
+    }
+}
+
+@media (max-width:1024px) {
+    .signIn-signUp {
+        display: none;
+    }
+    nav {
+        justify-content: space-around;
+    }
+    .logo-container>div {
+        font-size: 1.4rem;
+    }
+    .nav-list {
+        width: 70% ;
+    }
+    nav {
+        gap: 10px;
+    }
+    .heading {
+        font-size: 1.5rem;
+    }
+    .text-title{
+        font-size: 1rem;
+    }
+    #upcomingIpo{
+        gap:10px;
+    }
+    #upcomingIpo > button{
+        font-size: 0.75rem;
+        font-weight: 500;
+        width: 12%;
+    }
 }

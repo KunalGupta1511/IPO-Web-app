@@ -7,7 +7,7 @@ export default function Header() {
         <section id="upcomingIpo">
             <div className="upcomingIpo-text">
                 <div className="text-title">Upcoming</div>
-                <div className="text">
+                <div className="description">
                     Companies that have filed for an IPO with SEBI. Few details might be disclosed by the companies later on.
                 </div>
             </div>

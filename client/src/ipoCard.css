@@ -29,22 +29,30 @@ body {
     width: 27%;
     min-width: 410px;
     max-width: 550px;
-    height: 450px;
+    min-height: 450px;
     border-radius: 10px;
     padding: 0px 25px;
     display: flex;
     flex-shrink: 0;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    transition: transform 0.3s ease,box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px 0px #3F52FF1A;
 }
 
 .title-container {
     display: flex;
     justify-content: flex-start;
     align-items: start;
-    position: absolute;
+    position: relative;
     white-space: nowrap;
-    width: 20%;
+    width: 75%;
+    height: auto;
     top: 10%;
     gap: 15px;
 }
@@ -54,6 +62,9 @@ body {
     font-size: 1.5rem;
     color: #467CFF;
     margin-left: 10px;
+    margin-bottom: 10px;
+    text-wrap:wrap;
+    line-height: 1.15;
 }
 
 .title-container>img {
@@ -99,15 +110,15 @@ body {
 
 .buttons {
     width: 15%;
-    position: absolute;
-    top: 80%;
+    position: relative;
+    top: 0;
     display: flex;
     gap: 0.5rem;
 }
 
-.buttons button {
+#Rhp,#Drhp {
     width: 40%;
-    min-width: 70px;
+    min-width: 100px;
     padding: 0.6rem 0.3rem 0.6rem 0.6rem;
     border-radius: 10px;
     border: none;
@@ -122,6 +133,45 @@ body {
     transition: background-color 0.2s ease;
 }
 
-.buttons button:hover {
+#Drhp{
+    padding-right: 0.6rem;
+}
+#Rhp:hover , #Drhp:hover {
     background-color: #d2e2f9;
+}
+
+@media (max-width:1500px) {
+    .card{
+        width: 23%;
+    }
+    .title{
+        font-size: 1.35rem;
+    }
+    .ipo-details th{
+        font-size: 1.085rem;
+    }
+    .ipo-details td{
+        font-size: 1.085rem;
+    }
+    #Rhp,#Drhp{
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width:1024px) {
+    .card{
+        width: 18%;
+    }
+    .title{
+        font-size: 1.2rem;
+    }
+    .ipo-details th{
+        font-size: 0.95rem;
+    }
+    .ipo-details td{
+        font-size: 0.95rem;
+    }
+    #Rhp,#Drhp{
+        font-size: 1.2rem;
+    }
 }
