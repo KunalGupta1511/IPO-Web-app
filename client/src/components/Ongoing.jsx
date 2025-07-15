@@ -26,6 +26,13 @@ export default function Ongoing() {
         }
     }, [])
 
+    const dots = data.map((item) => {
+        if (item.status === "ongoing") {
+            if (item.id === 1) return <span className="dot active" key={item.id}></span>
+            else return <span className="dot" key={item.id}></span>
+        }
+    })
+
     function showScrollButton() {
         if (cards < 2 && windowWidth > 1024) {
             return false;
@@ -61,6 +68,9 @@ export default function Ongoing() {
             <section className="card-container" ref={containerScroll}>
                 {ipoData}
             </section>
+            {showScrollButton() && <div className="scroll-dots">
+                {dots}
+            </div>}
             {showScrollButton() && <div className="next" onClick={() => {
                 containerScroll.current.scrollBy({ left: 572, behavior: "smooth" })
             }}>

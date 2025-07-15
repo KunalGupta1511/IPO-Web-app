@@ -193,6 +193,10 @@ header {
     gap: 0.5rem;
 }
 
+.new-listed-ipo-list > .scroll-dots{
+    top: 300px;
+}
+
 .dot {
     width: 10px;
     height: 10px;

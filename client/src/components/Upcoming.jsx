@@ -59,9 +59,9 @@ export default function Upcoming() {
             <section className="card-container" ref={containerScroll}>
                 {ipoData}
             </section>
-            <div className="scroll-dots">
+            {showScrollButton() && <div className="scroll-dots">
                 {dots}
-            </div>
+            </div>}
             {showScrollButton() && <div className="next" onClick={() => {
                 containerScroll.current.scrollBy({ left: 572, behavior: "smooth" })
             }}>

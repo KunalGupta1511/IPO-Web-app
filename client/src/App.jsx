@@ -5,16 +5,22 @@ import UpcomingIpoCard from './components/Upcoming'
 import Demat from './components/Demat'
 import Ongoing from './components/Ongoing'
 import NewListed from './components/NewListed'
+import IpoNews from './components/IpoNews'
+import IpoAnalysis from './components/IpoAnalysis'
 
 function App() {
   return (
     <>
       <Navbar />
-      <Header/>
+      <Header />
       <UpcomingIpoCard />
       <Demat />
       <Ongoing />
       <NewListed />
+      <section className="news-analysis">
+        <IpoNews />
+        <IpoAnalysis />
+      </section>
     </>
   )
 }

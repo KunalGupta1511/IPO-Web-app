@@ -133,13 +133,68 @@ span {
     padding-right: 1.5rem;
 }
 
-.ongoing-ipo-list > .previous, .new-listed-ipo-list > .previous{
+.ongoing-ipo-list>.previous,
+.new-listed-ipo-list>.previous {
     position: relative;
     bottom: 0;
 }
 
-.ongoing-ipo-list > .next , .new-listed-ipo-list > .next{
+.ongoing-ipo-list>.next,
+.new-listed-ipo-list>.next {
     position: relative;
-    top: 38px;
+    top: -63px;
     left: 96vw;
+}
+
+.news-analysis {
+    display: flex;
+    position: relative;
+    top: 250px;
+    width: 100%;
+    height: auto;
+    font-family: Roboto;
+}
+
+.ipo-news,
+.ipo-analysis {
+    width: 50%;
+    margin: 0rem 2rem;
+    margin-bottom: 2rem;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 18.5px 0px #3F52FF4F;
+}
+
+.news-title,
+.analysis-title {
+    padding: 1rem;
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.news-list,
+.analysis-list {
+    list-style: none;
+    padding: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.news-item,
+.analysis-item {
+    font-weight: 500;
+    color: black;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.date {
+    margin-bottom: 2rem;
+    font-weight: 400;
+    color: #667384;
+    font-size: 0.75rem;
+    vertical-align: middle;
 }

@@ -7,6 +7,7 @@ export default function NewListed() {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth)
     const containerScroll = useRef(null);
     let cards = 0;
+    let id;
 
     const ipoData = data.map((item) => {
         if (item.status === "newListed") {
@@ -25,6 +26,13 @@ export default function NewListed() {
             window.removeEventListener("resize", setWidth);
         }
     }, [])
+
+    const dots = data.map((item) => {
+        if (item.status === "newListed") {
+            if (item.id === 1) return <span className="dot active" key={item.id}></span>
+            else return <span className="dot" key={item.id}></span>
+        }
+    })
 
     function showScrollButton() {
         if (cards < 2 && windowWidth > 1024) {
@@ -62,6 +70,9 @@ export default function NewListed() {
             <section className="card-container" ref={containerScroll}>
                 {ipoData}
             </section>
+            {showScrollButton() && <div className="scroll-dots">
+                {dots}
+            </div>}
             {showScrollButton() && <div className="next" onClick={() => {
                 containerScroll.current.scrollBy({ left: 572, behavior: "smooth" })
             }}>
