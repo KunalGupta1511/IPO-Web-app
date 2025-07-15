@@ -11,6 +11,7 @@ body {
     width: 100%;
     line-height: 100%;
     letter-spacing: 0%;
+    overflow-x: hidden;
 }
 
 nav {

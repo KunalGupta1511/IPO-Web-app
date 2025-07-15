@@ -1,9 +1,10 @@
 import "../demat_ongoing.css"
 import IpoCard from "./IpoCard"
 import data from "../data"
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Ongoing() {
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth)
     const containerScroll = useRef(null);
     let cards = 0;
 
@@ -14,9 +15,34 @@ export default function Ongoing() {
         }
     })
 
+    useEffect(() => {
+        function setWidth() {
+            setWindowWidth(window.innerWidth);
+        }
+        window.addEventListener("resize", setWidth);
+
+        return function () {
+            window.removeEventListener("resize", setWidth);
+        }
+    }, [])
+
+    function showScrollButton() {
+        if (cards < 2 && windowWidth > 1024) {
+            return false;
+        }
+        else if (cards > 2 && windowWidth > 1024) {
+            return true;
+        }
+        else if (cards >= 2 && windowWidth < 1024) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
     return <>
         <div className="ongoing-ipo-list">
-            {cards > 2 && <div className="previous" onClick={() => {
+            {showScrollButton() && <div className="previous" onClick={() => {
                 containerScroll.current.scrollBy({ left: -572, behavior: "smooth" })
             }}>
                 <svg width="27" height="46" viewBox="0 0 27 46" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -35,7 +61,7 @@ export default function Ongoing() {
             <section className="card-container" ref={containerScroll}>
                 {ipoData}
             </section>
-            {cards>2 && <div className="next" onClick={() => {
+            {showScrollButton() && <div className="next" onClick={() => {
                 containerScroll.current.scrollBy({ left: 572, behavior: "smooth" })
             }}>
                 <svg width="27" height="51" viewBox="0 0 27 51" fill="none" xmlns="http://www.w3.org/2000/svg">
