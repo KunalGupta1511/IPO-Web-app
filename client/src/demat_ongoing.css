@@ -198,3 +198,33 @@ span {
     font-size: 0.75rem;
     vertical-align: middle;
 }
+
+@media (max-width:768px) {
+    .news-analysis {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ipo-news,
+    .ipo-analysis {
+        width: 95%;
+    }
+
+    .demat-account {
+        width: 72%;
+        left: 10%;
+        border-radius: 20px;
+    }
+
+    .demat-text {
+        font-size: 1.1875rem;
+        margin: 0;
+    }
+
+    .ongoing-ipo-list>.next,
+    .new-listed-ipo-list>.next{
+        top: -100px;
+        left: 90vw;
+    }
+}

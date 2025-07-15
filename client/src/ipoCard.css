@@ -36,11 +36,11 @@ body {
     flex-shrink: 0;
     flex-direction: column;
     justify-content: space-around;
-    transition: transform 0.3s ease,box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
 }
 
-.card:hover{
+.card:hover {
     transform: translateY(-10px);
     box-shadow: 0px 10px 20px 0px #3F52FF1A;
 }
@@ -63,7 +63,7 @@ body {
     color: #467CFF;
     margin-left: 10px;
     margin-bottom: 10px;
-    text-wrap:wrap;
+    text-wrap: wrap;
     line-height: 1.15;
 }
 
@@ -116,7 +116,8 @@ body {
     gap: 0.5rem;
 }
 
-#Rhp,#Drhp {
+#Rhp,
+#Drhp {
     width: 40%;
     min-width: 100px;
     padding: 0.6rem 0.3rem 0.6rem 0.6rem;
@@ -133,45 +134,160 @@ body {
     transition: background-color 0.2s ease;
 }
 
-#Drhp{
+#Drhp {
     padding-right: 0.6rem;
 }
-#Rhp:hover , #Drhp:hover {
+
+#Rhp:hover,
+#Drhp:hover {
     background-color: #d2e2f9;
 }
 
 @media (max-width:1500px) {
-    .card{
+    .card {
         width: 23%;
     }
-    .title{
+
+    .title {
         font-size: 1.35rem;
     }
-    .ipo-details th{
+
+    .ipo-details th {
         font-size: 1.085rem;
     }
-    .ipo-details td{
+
+    .ipo-details td {
         font-size: 1.085rem;
     }
-    #Rhp,#Drhp{
+
+    #Rhp,
+    #Drhp {
         font-size: 1.3rem;
     }
 }
 
 @media (max-width:1024px) {
-    .card{
+    .card {
         width: 18%;
     }
-    .title{
+
+    .title {
         font-size: 1.2rem;
     }
-    .ipo-details th{
+
+    .ipo-details th {
         font-size: 0.95rem;
     }
-    .ipo-details td{
+
+    .ipo-details td {
         font-size: 0.95rem;
     }
-    #Rhp,#Drhp{
+
+    #Rhp,
+    #Drhp {
         font-size: 1.2rem;
+    }
+}
+
+@media (max-width:768px) {
+    .card-container {
+        gap: 10px;
+        height: 497px;
+    }
+
+    .ipo-card {
+        width: fit-content;
+        max-width: 250px;
+        height: 450px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px 0px #3F52FF1A;
+        margin: auto;
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        transition: all 0.3s ease;
+        padding: 1rem;
+    }
+
+    .ipo-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 10px 20px 0px #3F52FF1A;
+    }
+
+    .ipo-logo {
+        width: 35%;
+        max-width: 90px;
+        max-height: 41px;
+        margin: 2rem 0rem 1rem 0rem;
+    }
+
+    .ipo-title {
+        color: #467CFF;
+        font-size: 1.125rem;
+        font-weight: 500;
+        margin: 0.5rem 0 1rem 0;
+    }
+
+    .ipo-details-mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+        margin: 1.7rem;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        gap: 0.5rem;
+        text-align: left;
+        width: 100%;
+        margin: 1rem;
+    }
+
+    .col {
+        width: 48%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .label {
+        font-size: 0.875rem;
+        font-weight: 400;
+        color: #5A5858;
+        margin: 0;
+    }
+
+    .value {
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: black;
+        margin: 0.7rem 0 0 0;
+    }
+
+    .buttons-mobile {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .buttons-mobile button {
+        padding: 0.4rem 1rem;
+        border: none;
+        border-radius: 8px;
+        background-color: #f1f1f1;
+        color: black;
+        font-weight: 600;
+        font-size: 0.875rem;
+        margin-bottom: 1rem;
+    }
+
+    .buttons .active {
+        background-color: #E1EFFF;
+    }
+
+    .card-container.ongoing{
+        top: 275px;
+        margin-left: 20px;
     }
 }

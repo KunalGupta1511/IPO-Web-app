@@ -42,6 +42,8 @@ nav>svg {
 .logo {
     width: 21%;
     height: auto;
+    min-height: 20px;
+    min-width: 30px;
 }
 
 .logo-container>div {
@@ -121,6 +123,16 @@ nav>svg {
     text-decoration: none;
 }
 
+.images {
+    display: none;
+}
+
+.icon {
+    width: 24px;
+    height: auto;
+    max-height: 20px;
+}
+
 header {
     position: absolute;
     display: flex;
@@ -164,6 +176,7 @@ header {
     border: none;
     border-radius: 10px;
     width: 8%;
+    min-width: 115px;
     height: 100%;
     font-family: Poppins;
     font-weight: 700;
@@ -193,7 +206,7 @@ header {
     gap: 0.5rem;
 }
 
-.new-listed-ipo-list > .scroll-dots{
+.new-listed-ipo-list>.scroll-dots {
     top: 300px;
 }
 
@@ -326,6 +339,101 @@ svg {
         font-size: 0.75rem;
         font-weight: 500;
         width: 12%;
+    }
+}
+
+@media (max-width:768px) {
+    body {
+        background-color: white;
+    }
+
+    nav {
+        justify-content: space-between;
+    }
+
+    nav>svg {
+        display: none;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    .nav-list.activate,
+    .signIn-signUp.join {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        position: absolute;
+        top: 6rem;
+        right: 0;
+        z-index: 1;
+        gap: 10px;
+        height: auto;
+        background-color: white;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem 0rem;
+        transform-origin: top;
+        border: none;
+        border-radius: 10px;
+        animation: squeezeOut 0.3s ease;
+        padding-left: 1rem;
+    }
+
+    .signIn-signUp.join {
+        box-shadow: none;
+        z-index: 1;
+        justify-content: end;
+        margin-left: 0.2rem;
+        align-items: center;
+        width: fit-content;
+    }
+
+    .images {
+        display: flex;
+    }
+
+    .icon {
+        margin-right: 1rem;
+        border: 1px solid #999999;
+        padding: 0.2rem;
+        box-shadow: 0px 0px 4px 1px #0000001A;
+        cursor: pointer;
+    }
+
+    .search {
+        border: none;
+        box-shadow: none;
+    }
+
+    .logo-container>div {
+        font-size: 1.25rem;
+    }
+
+    #upcomingIpo,
+    #ongoingIpo,
+    #newListedIpo {
+        align-items: start;
+    }
+
+    #upcomingIpo>button,
+    #ongoingIpo>button,
+    #newListedIpo>button {
+        position: absolute;
+        top: -7px;
+        right: 0;
+        min-width: 80px;
+        max-height: 27px;
+        font-size: 0.6875rem;
+    }
+
+    .description{
+        width: 100%;
+    }
+
+    .scroll-dots{
+        top: 270px;
     }
 }
 

@@ -27,22 +27,21 @@ export default function Upcoming() {
 
     const dots = data.map((item) => {
         if (item.status === "upcoming") {
-            if (item.id === 1) return <span className="dot active" key={item.id}></span>
-            else return <span className="dot" key={item.id}></span>
+            return <span className="dot" key={item.id}></span>
         }
     })
 
     function showScrollButton() {
-        if(cards < 2 && windowWidth > 1024){
+        if (cards < 2 && windowWidth > 1024) {
             return false;
         }
-        else if(cards > 2 && windowWidth > 1024){
+        else if (cards > 2 && windowWidth > 1024) {
             return true;
         }
-        else if(cards >= 2 && windowWidth < 1024){
+        else if (cards >= 2 && windowWidth < 1024) {
             return true;
         }
-        else{
+        else {
             return false;
         }
     }
@@ -50,7 +49,12 @@ export default function Upcoming() {
     return <>
         <div className="upcoming-ipo-list">
             {showScrollButton() && <div className="previous" onClick={() => {
-                containerScroll.current.scrollBy({ left: -572, behavior: "smooth" })
+                {
+                    windowWidth > 768 ?
+                    containerScroll.current.scrollBy({ left: -572, behavior: "smooth" })
+                    :
+                    containerScroll.current.scrollBy({ left: -240, behavior: "smooth" })
+                }
             }}>
                 <svg width="27" height="46" viewBox="0 0 27 46" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M24 43L3 23L24 3" stroke="#0078FF" strokeOpacity="0.49" strokeWidth="3" strokeLinecap="square" />
@@ -63,7 +67,12 @@ export default function Upcoming() {
                 {dots}
             </div>}
             {showScrollButton() && <div className="next" onClick={() => {
-                containerScroll.current.scrollBy({ left: 572, behavior: "smooth" })
+                {
+                    windowWidth > 768 ?
+                    containerScroll.current.scrollBy({ left: 572, behavior: "smooth" })
+                    :
+                    containerScroll.current.scrollBy({ left: 240, behavior: "smooth" })
+                }
             }}>
                 <svg width="27" height="51" viewBox="0 0 27 51" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3 3L24 25.5L3 48" stroke="#0078FF" strokeWidth="3" strokeLinecap="square" className="next" />
