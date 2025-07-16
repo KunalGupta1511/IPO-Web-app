@@ -49,7 +49,7 @@ export default function NewListed() {
     }
 
     return <>
-        <div className="new-listed-ipo-list">
+        <section className="new-listed-ipo-list">
             {showScrollButton() && <div className="previous" onClick={() => {
                 {
                     windowWidth > 768 ?
@@ -89,6 +89,6 @@ export default function NewListed() {
                     <path d="M3 3L24 25.5L3 48" stroke="#0078FF" strokeWidth="3" strokeLinecap="square" className="next" />
                 </svg>
             </div>}
-        </div>
+        </section>
     </>
 }

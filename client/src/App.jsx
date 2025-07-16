@@ -7,6 +7,7 @@ import Ongoing from './components/Ongoing'
 import NewListed from './components/NewListed'
 import IpoNews from './components/IpoNews'
 import IpoAnalysis from './components/IpoAnalysis'
+import FaqSection from './components/FaqSection'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <IpoNews />
         <IpoAnalysis />
       </section>
+      <FaqSection />
     </>
   )
 }

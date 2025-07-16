@@ -47,7 +47,7 @@ export default function Ongoing() {
         }
     }
     return <>
-        <div className="ongoing-ipo-list">
+        <section className="ongoing-ipo-list">
             {showScrollButton() && <div className="previous" onClick={() =>{
                 {windowWidth>768 ? 
                     containerScroll.current.scrollBy({ left: -572, behavior: "smooth" }) 
@@ -83,6 +83,6 @@ export default function Ongoing() {
                     <path d="M3 3L24 25.5L3 48" stroke="#0078FF" strokeWidth="3" strokeLinecap="square" className="next" />
                 </svg>
             </div>}
-        </div>
+        </section>
     </>
 }

@@ -47,7 +47,7 @@ export default function Upcoming() {
     }
 
     return <>
-        <div className="upcoming-ipo-list">
+        <section className="upcoming-ipo-list">
             {showScrollButton() && <div className="previous" onClick={() => {
                 {
                     windowWidth > 768 ?
@@ -78,6 +78,6 @@ export default function Upcoming() {
                     <path d="M3 3L24 25.5L3 48" stroke="#0078FF" strokeWidth="3" strokeLinecap="square" className="next" />
                 </svg>
             </div>}
-        </div>
+        </section>
     </>
 }
