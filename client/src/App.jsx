@@ -1,29 +1,16 @@
-import { useState } from 'react'
-import Navbar from './components/Navbar'
-import Header from './components/Header'
-import UpcomingIpoCard from './components/Upcoming'
-import Demat from './components/Demat'
-import Ongoing from './components/Ongoing'
-import NewListed from './components/NewListed'
-import IpoNews from './components/IpoNews'
-import IpoAnalysis from './components/IpoAnalysis'
-import FaqSection from './components/FaqSection'
+import Home from "./pages/Ipo_home"
+import {Signup , Signin} from "./pages/signUp_signIn"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <Header />
-      <UpcomingIpoCard />
-      <Demat />
-      <Ongoing />
-      <NewListed />
-      <section className="news-analysis">
-        <IpoNews />
-        <IpoAnalysis />
-      </section>
-      <FaqSection />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/signin" element={<Signin />} />
+      </Routes>
+    </Router>
   )
 }
 

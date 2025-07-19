@@ -1,4 +1,4 @@
-import "../demat_ongoing.css"
+import "../css/demat_ongoing.css"
 import IpoCard from "./IpoCard"
 import data from "../data"
 import { useEffect, useRef, useState } from "react";

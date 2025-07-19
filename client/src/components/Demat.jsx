@@ -1,4 +1,4 @@
-import "../demat_ongoing.css"
+import "../css/demat_ongoing.css"
 
 export default function Demat() {
     return <>

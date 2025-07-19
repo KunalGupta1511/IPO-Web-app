@@ -98,11 +98,12 @@ nav>svg {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    gap:5px;
     width: 20%;
     height: 34%;
 }
 
-.sign-up {
+.sign-up , .sign-in{
     width: 52%;
     height: 100%;
     border: none;
@@ -118,7 +119,9 @@ nav>svg {
     cursor: pointer;
 }
 
-.signIn-signUp>a {
+.sign-in {
+    background-color: white;
+    border: none;
     color: #9A9A9A;
     text-decoration: none;
 }

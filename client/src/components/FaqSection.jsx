@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../faqSection.css";
+import "../css/faqSection.css";
 
 import faqData from "../faqData";
 

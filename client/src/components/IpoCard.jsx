@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "../ipoCard.css"
+import "../css/ipoCard.css"
 
 export default function IpoCard(props) {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -73,34 +73,34 @@ export default function IpoCard(props) {
             <img src={props.ipoLogo} alt="Company Logo" className="ipo-logo" />
             <h2 className="ipo-title">{props.ipoTitle}</h2>
             <div className="ipo-details-mobile">
-                <div class="row">
-                    <div class="col">
-                        <p class="label">PRICE BAND</p>
-                        <p class="value">Rs 39 – 41</p>
+                <div className="row">
+                    <div className="col">
+                        <p className="label">PRICE BAND</p>
+                        <p className="value">Rs 39 – 41</p>
                     </div>
-                    <div class="col">
-                        <p class="label">OPEN</p>
-                        <p class="value">2024-01-22</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <p class="label">ISSUE SIZE</p>
-                        <p class="value">143.81 Cr.</p>
-                    </div>
-                    <div class="col">
-                        <p class="label">ISSUE TYPE</p>
-                        <p class="value">Book Built</p>
+                    <div className="col">
+                        <p className="label">OPEN</p>
+                        <p className="value">2024-01-22</p>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <p class="label">CLOSE</p>
-                        <p class="value">2024-01-24</p>
+                <div className="row">
+                    <div className="col">
+                        <p className="label">ISSUE SIZE</p>
+                        <p className="value">143.81 Cr.</p>
                     </div>
-                    <div class="col">
-                        <p class="label">LISTING DATE</p>
-                        <p class="value">2024-01-30</p>
+                    <div className="col">
+                        <p className="label">ISSUE TYPE</p>
+                        <p className="value">Book Built</p>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col">
+                        <p className="label">CLOSE</p>
+                        <p className="value">2024-01-24</p>
+                    </div>
+                    <div className="col">
+                        <p className="label">LISTING DATE</p>
+                        <p className="value">2024-01-30</p>
                     </div>
                 </div>
             </div >
