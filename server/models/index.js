@@ -16,9 +16,9 @@ if (config.use_env_variable) {
   sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
 
-sequelize.sync()
-  .then(() => console.log("All models were synchronized successfully."))
-  .catch(err => console.error("Failed to sync models:", err));
+// sequelize.sync()
+//   .then(() => console.log("All models were synchronized successfully."))
+//   .catch(err => console.error("Failed to sync models:", err));
 
 fs
   .readdirSync(__dirname)
