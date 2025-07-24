@@ -26,8 +26,8 @@ module.exports = (req, res, next) => {
                 
                 req.user = user;
                 next();
-            } catch (error) {
-                console.log(error)
+            } catch (err) {
+                return res.status(500).json({error : err.message})
             }
         })
     }

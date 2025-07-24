@@ -5,8 +5,6 @@ const jwt = require("jsonwebtoken");
 const { User } = require("../models");
 const { where } = require('sequelize');
 
-const auth = require("../middlewares/auth")
-
 router.post('/register', async (req, res) => {
     try {
         const { name, email, password } = req.body

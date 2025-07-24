@@ -4,7 +4,10 @@ const { sequelize } = require('./models'); // Adjust the path if needed
 const app = express();
 
 app.use(express.json());
+
 app.use("/api", require("./routes/auth"));
+app.use("/api", require("./routes/companyRoutes"));
+app.use("/api", require("./routes/ipoRoutes"));
 
 
 const PORT = process.env.PORT || 8001
