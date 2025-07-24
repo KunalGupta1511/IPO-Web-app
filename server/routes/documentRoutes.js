@@ -6,7 +6,8 @@ const upload = require("../middlewares/uploads");
 
 const { 
     uploadDocument,
-    downloadDocument
+    downloadDocument,
+    deleteDocument
 } = require("../controllers/documentController");
 
 router
@@ -20,5 +21,6 @@ router
         uploadDocument
     )
     .get("/ipos/:id/download",downloadDocument)
+    .delete("/ipos/:id/delete-doc",deleteDocument)
 
 module.exports = router
