@@ -10,8 +10,8 @@ const { addCompany,
 
 router
     .post("/companies",auth, addCompany)
-    .get("/companies",auth, getAllCompanies)
-    .get("/companies/:id",auth, getCompany)
+    .get("/companies", getAllCompanies)
+    .get("/companies/:id", getCompany)
     .put("/companies/:id",auth, updateCompany)
     .delete("/companies/:id",auth, deleteCompany)
 

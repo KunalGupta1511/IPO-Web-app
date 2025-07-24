@@ -9,11 +9,13 @@ const {
     deleteIPO,
     getAllIPOs,
     getIPO,
-    updateIPO
+    updateIPO,
+    searchIPO
 } = require("../controllers/ipoController");
 
 router
     .post("/ipos", auth, validateIPO, addIPO)
+    .get("/ipos/search",searchIPO)
     .get("/ipos", getAllIPOs)
     .get("/ipos/:id", getIPO)
     .put("/ipos/:id",auth, updateIPO)
