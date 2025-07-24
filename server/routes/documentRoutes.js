@@ -21,6 +21,6 @@ router
         uploadDocument
     )
     .get("/ipos/:id/download",downloadDocument)
-    .delete("/ipos/:id/delete-doc",deleteDocument)
+    .delete("/ipos/:id/delete-doc",auth,deleteDocument)
 
 module.exports = router
