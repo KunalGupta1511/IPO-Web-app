@@ -8,6 +8,7 @@ app.use(express.json());
 app.use("/api", require("./routes/auth"));
 app.use("/api", require("./routes/companyRoutes"));
 app.use("/api", require("./routes/ipoRoutes"));
+app.use("/api", require("./routes/documentRoutes"));
 
 
 const PORT = process.env.PORT || 8001

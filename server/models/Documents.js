@@ -14,13 +14,15 @@ module.exports = (sequelize, DataTypes) => {
         drhp_pdf: DataTypes.STRING
     }, {
         tableName: 'documents',
-        timestamps: false
+        timestamps: false,
+        underscored : true
     });
 
     Document.associate = function (models) {
         Document.belongsTo(models.IPO, {
             foreignKey: 'ipo_id',
-            as : 'ipo'
+            as : 'ipo',
+            onDelete : 'CASCADE'
         });
     };
 
