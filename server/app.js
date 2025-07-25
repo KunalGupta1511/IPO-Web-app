@@ -9,6 +9,7 @@ app.use("/api", require("./routes/auth"));
 app.use("/api", require("./routes/companyRoutes"));
 app.use("/api", require("./routes/ipoRoutes"));
 app.use("/api", require("./routes/documentRoutes"));
+app.use("/api", require("./routes/dashboardRoutes"));
 
 
 const PORT = process.env.PORT || 8001
