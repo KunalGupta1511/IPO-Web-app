@@ -1,5 +1,7 @@
 const { where } = require("sequelize");
-const { Company } = require("../models");
+const { Company, IPO, Document } = require("../models");
+const fs = require("fs");
+const path = require("path");
 
 const addCompany = async (req, res) => {
     const { company_name, company_logo } = req.body;
@@ -80,15 +82,32 @@ const deleteCompany = async (req, res) => {
     const id = req.params.id;
 
     try {
-        const deleted = await Company.destroy({where : {company_id : id}});
+        const ipos = await IPO.findAll({ where: { company_id: id } });
 
-        if(deleted===0){
+        let docs = [];
+        for (const ipo of ipos) {
+            docs = await Document.findAll({ where: { ipo_id: ipo.ipo_id } });
+        }
+
+        for (const doc of docs) {
+            if (doc.rhp_pdf) {
+                const filePath = path.join(__dirname, "..", doc.rhp_pdf);
+                if (fs.existsSync(filePath)) fs.unlinkSync(filePath);
+            }
+            if (doc.drhp_pdf) {
+                const filePath = path.join(__dirname, "..", doc.drhp_pdf);
+                if (fs.existsSync(filePath)) fs.unlinkSync(filePath);
+            }
+        }
+        const deleted = await Company.destroy({ where: { company_id: id } });
+
+        if (deleted === 0) {
             return res.status(404).json({ error: "Company not found" });
         }
 
         return res.status(200).json({ success: true, message: "Company deleted successfully" });
     } catch (err) {
-        return res.status(500).json({error : err.message});
+        return res.status(500).json({ error: err.message });
     }
 }
 

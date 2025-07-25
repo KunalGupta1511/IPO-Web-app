@@ -28,7 +28,7 @@ module.exports = {
       issue_type: DataTypes.STRING,
       listing_date: DataTypes.DATE,
       status: {
-        type: DataTypes.ENUM('Upcoming', 'Open', 'Close', 'Listed')
+        type: DataTypes.ENUM('Upcoming', 'Open', 'Closed', 'Listed')
       },
       ipo_price: DataTypes.DECIMAL(10, 2),
       listing_price: DataTypes.DECIMAL(10, 2),
