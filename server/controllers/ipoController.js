@@ -1,5 +1,7 @@
 const { where, Op } = require("sequelize");
-const { IPO, Company, Sequelize } = require("../models");
+const { IPO, Company, Sequelize, Document } = require("../models");
+const fs = require("fs");
+const path = require("path");
 
 const addIPO = async (req, res) => {
     const IPO_data = req.body;
@@ -72,6 +74,18 @@ const deleteIPO = async (req, res) => {
     const id = req.params.id;
 
     try {
+        const docs = await Document.findAll({ where: { ipo_id: id } })
+
+        for (const doc of docs) {
+            if (doc.rhp_pdf) {
+                const filePath = path.join(__dirname, "..", doc.rhp_pdf);
+                if (fs.existsSync(filePath)) fs.unlinkSync(filePath);
+            }
+            if (doc.drhp_pdf) {
+                const filePath = path.join(__dirname, "..", doc.drhp_pdf);
+                if (fs.existsSync(filePath)) fs.unlinkSync(filePath);
+            }
+        }
         const deleted = await IPO.destroy({ where: { ipo_id: id } });
 
         if (deleted === 0) {
