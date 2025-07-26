@@ -53,7 +53,7 @@ export default function Upcoming() {
                     windowWidth > 768 ?
                     containerScroll.current.scrollBy({ left: -572, behavior: "smooth" })
                     :
-                    containerScroll.current.scrollBy({ left: -240, behavior: "smooth" })
+                    containerScroll.current.scrollBy({ left: -320, behavior: "smooth" })
                 }
             }}>
                 <svg width="27" height="46" viewBox="0 0 27 46" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -71,7 +71,7 @@ export default function Upcoming() {
                     windowWidth > 768 ?
                     containerScroll.current.scrollBy({ left: 572, behavior: "smooth" })
                     :
-                    containerScroll.current.scrollBy({ left: 240, behavior: "smooth" })
+                    containerScroll.current.scrollBy({ left: 320, behavior: "smooth" })
                 }
             }}>
                 <svg width="27" height="51" viewBox="0 0 27 51" fill="none" xmlns="http://www.w3.org/2000/svg">

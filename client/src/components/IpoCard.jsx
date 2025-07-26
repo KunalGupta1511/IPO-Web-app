@@ -2,15 +2,16 @@ import { useEffect, useState } from "react";
 import "../css/ipoCard.css"
 
 export default function IpoCard(props) {
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [windowWidth, setWindowWidth] = useState(document.documentElement.clientWidth);
     const labels = Object.keys(props.ipoDetails).map((item) => {
         return item.replace(/([A-Z])/g, " $1").toUpperCase();
     })
 
     useEffect(() => {
         function setWidth() {
-            setWindowWidth(window.innerWidth);
+            setWindowWidth(document.documentElement.clientWidth);
         }
+        setWidth();
         window.addEventListener("resize", setWidth);
 
         return function () {
@@ -75,32 +76,32 @@ export default function IpoCard(props) {
             <div className="ipo-details-mobile">
                 <div className="row">
                     <div className="col">
-                        <p className="label">PRICE BAND</p>
-                        <p className="value">Rs 39 – 41</p>
+                        <p className="label">{labels[0]}</p>
+                        <p className="value">{fetchIpoDetails(0)}</p>
                     </div>
                     <div className="col">
-                        <p className="label">OPEN</p>
-                        <p className="value">2024-01-22</p>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col">
-                        <p className="label">ISSUE SIZE</p>
-                        <p className="value">143.81 Cr.</p>
-                    </div>
-                    <div className="col">
-                        <p className="label">ISSUE TYPE</p>
-                        <p className="value">Book Built</p>
+                        <p className="label">{labels[1]}</p>
+                        <p className="value">{fetchIpoDetails(1)}</p>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col">
-                        <p className="label">CLOSE</p>
-                        <p className="value">2024-01-24</p>
+                        <p className="label">{labels[2]}</p>
+                        <p className="value">{fetchIpoDetails(2)}</p>
                     </div>
                     <div className="col">
-                        <p className="label">LISTING DATE</p>
-                        <p className="value">2024-01-30</p>
+                        <p className="label">{labels[3]}</p>
+                        <p className="value">{fetchIpoDetails(3)}</p>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col">
+                        <p className="label">{labels[4]}</p>
+                        <p className="value">{fetchIpoDetails(4)}</p>
+                    </div>
+                    <div className="col">
+                        <p className="label">{labels[5]}</p>
+                        <p className="value">{fetchIpoDetails(5)}</p>
                     </div>
                 </div>
             </div >
