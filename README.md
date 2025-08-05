@@ -79,5 +79,3 @@ me23bt005@iitdh.ac.in • Prayagraj
 GitHub: [KunalGupta1511](https://github.com/KunalGupta1511)
 
 ---
-## 📁 Folder Structure
-
